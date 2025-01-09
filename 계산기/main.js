@@ -17,6 +17,7 @@ let sub=document.querySelector(".sub")
 let form=document.querySelector("form")
 let result=document.querySelector(".result")
 let re=document.querySelector(".reset")
+let ba=document.querySelector(".back")
 form.addEventListener("submit",e=>{
     e.preventDefault()
 })
@@ -69,7 +70,60 @@ mu.addEventListener("click",e=>{
     result.textContent+="*"
 })
 re.addEventListener("click",e=>{
-    result.textContent=0})
+    result.textContent=""})
 
+ba.addEventListener("click",e=>{
+    result.textContent=result.textContent.slice(0,result.textContent.length-1)
+    })
+document.addEventListener("keydown",event=>{
+    let key=event.key
+    if (key=="1"){
+        result.textContent+="1"
+    }
+    else if (key=="2"){
+        result.textContent+="2"
+    }
+    else if (key=="3"){
+        result.textContent+="3"
 
+    }
+    else if (key=="4"){
+        result.textContent+="4"
+    }
+    else if (key=="5"){
+        result.textContent+="2"
+    }
+    else if (key=="6"){
+        result.textContent+="6"
+    }
+    else if (key=="7"){
+        result.textContent+="7"
+    }
+    else if (key=="8"){8
+        result.textContent+=""
+    }
+    else if (key=="9"){
+        result.textContent+="9"
+    }
+    else if (key=="="){
+        result.textContent = result.textContent.slice(0, result.textContent.length-1)
+
+    }
+    else if (key=="-"){
+        result.textContent+="-"
+    }
+    else if (key=="+"){
+        result.textContent+="+"
+    }
+    else if (key=="/"){
+        result.textContent+="/"
+    }
+    else if (key=="*"){
+        result.textContent+="*"
+    }
+    else if (key=="Backspace"){
+        result.textContent = result.textContent.slice(0, result.textContent.length-1)
+    }
+
+})
 
